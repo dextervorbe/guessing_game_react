@@ -18,13 +18,14 @@ export default function Home() {
     setMessage('Start guessing...');
     document.body.style.backgroundColor = '#222';
     audio.pause();
+    setAudio(new Audio(Song))
   }
 
   function handleInputChange(event) {
     const guess = parseInt(event.target.value, 10);
     setGuess(isNaN(guess) ? 0 : guess);
-    console.log(guess);
-    console.log(number);
+    // console.log(guess);
+    // console.log(number);
   }
 
   //comparing the guess against the random number
