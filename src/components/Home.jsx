@@ -7,14 +7,17 @@ export default function Home() {
   const [score, setScore] = useState(20);
   const [highScore, setHighScore] = useState(0);
   const [guess, setGuess] = useState(0);
+  const [audio, setAudio] = useState(new Audio(Song));
 
-  let audio = new Audio(Song);
 
   // function that creates a random number between 1 to 20 for the user to guess when the user presses the Again button
   function restart() {
+    audio.pause();
     setNumber(Math.trunc(Math.random() * 20) + 1);
     setScore(20);
     setMessage('Start guessing...');
+    document.body.style.backgroundColor = '#222';
+    audio.pause();
   }
 
   function handleInputChange(event) {
