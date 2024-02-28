@@ -88,6 +88,7 @@ export default function Home() {
           </p>
         </section>
       </main>
+      <footer>© 2024 Dexter Vorbe. All rights reserved. | Website created by Dexter Vorbe</footer>
     </div>
   );
 }
